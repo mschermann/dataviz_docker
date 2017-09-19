@@ -1,4 +1,4 @@
-# Docker Container for Data Analytics
+# Docker Container for Data Wrangling
 
 ## Installation
 
