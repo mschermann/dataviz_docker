@@ -11,7 +11,7 @@ You should see an output like this:
 ```
 git version 2.11.0 (Apple Git-81)
 ```
-If you do get a 'Not found' error, you need to install git. Follow the instructions (here)[https://git-scm.com/downloads]. I also recommend that you install the (github Desktop)[https://help.github.com/desktop/guides/getting-started/installing-github-desktop/]. It makes managing git repositories easy and user-friendly.
+If you do get a 'Not found' error, you need to install git. Follow the instructions [here](https://git-scm.com/downloads). I also recommend that you install the [github Desktop](https://help.github.com/desktop/guides/getting-started/installing-github-desktop/). It makes managing git repositories easy and user-friendly.
 
 ### 1. Clone this repository to a folder
 Open a Terminal/Command Prompt and navigate to a folder that you have setup for the container.
@@ -21,7 +21,7 @@ git clone https://github.com/mschermann/dataviz_docker
 ```
 
 ### 2. Install Docker & Docker-compose from
-Go to (https://www.docker.com/community-edition)[https://www.docker.com/community-edition] and install docker for your operating system
+Go to [https://www.docker.com/community-edition](https://www.docker.com/community-edition) and install docker for your operating system. Follow the instructions.
 
 ### 3. Make sure that docker is correctly installed
 Open a Terminal/Command Prompt and type the following:
