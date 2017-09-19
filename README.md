@@ -57,4 +57,4 @@ Copy the URL mentioned in the console. In the above example, it would be:
 http://0.0.0.0:8888/?token=ABCDEFGHIJ
 ```
 Paste this into your browser. It should open the Jupyter notebook. You should see an empty folder.
-![Jupyter Start Screen](https://github.com/mschermann/dataviz_docker/assets/jupyter.png)
+![Jupyter Start Screen](https://github.com/mschermann/dataviz_docker/blob/master/assets/jupyter.png)
