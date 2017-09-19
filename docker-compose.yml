@@ -1,0 +1,18 @@
+version: '3'
+
+# ${VARIABLE} are in the .env file
+
+services:
+  jupyter: 
+    build: .
+    hostname: ${JUPYTER_HOSTNAME}
+    environment:
+      - LANG=${JUPYTER_LANGUAGE}
+      - JUPYTER_USER=${JUPYTER_USER}
+      - JUPYTER_PORT=${JUPYTER_PORT}
+    command: ./home/${JUPYTER_USER}/run_jupyter.sh
+    volumes:
+      - ./notebooks:/home/${JUPYTER_USER}/notebooks
+    ports:
+      - "8888:8888"
+      

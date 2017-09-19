@@ -1,0 +1,9 @@
+build-essential
+apt-utils
+wget
+bzip2
+ca-certificates
+sudo
+locales
+git
+unzip
