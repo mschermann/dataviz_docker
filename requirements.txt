@@ -3,6 +3,7 @@ numexpr
 jupyter
 notebook
 jupyter_contrib_nbextensions
+jupyter-console
 ipywidgets
 scipy
 pandas
@@ -18,4 +19,4 @@ sqlalchemy
 xlrd
 protobuf
 pygeocoder
-
+dedupe

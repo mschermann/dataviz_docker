@@ -7,3 +7,4 @@ sudo
 locales
 git
 unzip
+python3-gdbm
