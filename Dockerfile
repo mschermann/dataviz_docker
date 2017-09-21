@@ -17,7 +17,19 @@ ADD apt-get-install.txt /tmp/
 
 # Install everything
 ARG DEBIAN_FRONTEND=noninteractive
-RUN apt-get update -y && apt-get install -y apt-utils && xargs -a /tmp/apt-get-install.txt apt-get install -y --no-install-recommends
+RUN apt-get update -y && apt-get install - y \
+    apt-utils \
+    build-essential \
+    bzip2 \
+    ca-certificates \
+    git \
+    locales \
+    python3-gdbm \
+    sudo \
+    unzip \
+    wget --no-install-recommends
+
+#RUN apt-get update -y && apt-get install -y apt-utils && xargs -a /tmp/apt-get-install.txt apt-get install -y --no-install-recommends
 RUN apt-get clean && rm -rf /var/lib/apt/lists/*
 
 # Now set the locale
