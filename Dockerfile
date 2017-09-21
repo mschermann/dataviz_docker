@@ -17,8 +17,7 @@ ADD apt-get-install.txt /tmp/
 
 # Install everything
 ARG DEBIAN_FRONTEND=noninteractive
-RUN apt-get update -y && apt-get install -y apt-utils
-RUN xargs -a /tmp/apt-get-install.txt apt-get install -y --no-install-recommends
+RUN apt-get update -y && apt-get install -y apt-utils && xargs -a /tmp/apt-get-install.txt apt-get install -y --no-install-recommends
 RUN apt-get clean && rm -rf /var/lib/apt/lists/*
 
 # Now set the locale
@@ -29,6 +28,11 @@ ADD requirements.txt /tmp/
 
 # Install via via everything that is mentioned in requirements.txt
 RUN pip3 install --no-cache-dir -r /tmp/requirements.txt
+
+# Install the exentions
+RUN jupyter contrib nbextension install
+RUN jupyter nbextensions_configurator enable
+
 
 # Set a jupyter user
 ENV JUPYTER_USER dv
@@ -49,8 +53,8 @@ USER $JUPYTER_USER
 ENV XDG_CACHE_HOME /home/$JUPYTER_USER/.cache/
 RUN MPLBACKEND=Agg python -c "import matplotlib.pyplot"
 
-# Install the exentions
-RUN jupyter contrib nbextension install --user
+# Copy the jupyter config
+
 
 # Create the notebook folder
 RUN mkdir -p /home/$JUPYTER_USER/notebooks
