@@ -59,6 +59,17 @@ http://0.0.0.0:8888/?token=ABCDEFGHIJ
 Paste this into your browser. It should open the Jupyter notebook. You should see an empty folder.
 ![Jupyter Start Screen](https://github.com/mschermann/dataviz_docker/blob/master/assets/jupyter.png)
 
+### 6. Install additional packages
+The container only includes the basic packages. You can install packages in two ways:
+```
+!pip install package-name
+```
+This is the quickest way but if you rebuild the container for some reason the package is gone again.
 
-### 6. Issues? Questions? Problems
+Thus, add the package also to the file requirements.txt and run
+```
+docker-compose up --build
+```
+
+### 7. Issues? Questions? Problems
 Start here: [https://github.com/mschermann/dataviz_docker/issues](https://github.com/mschermann/dataviz_docker/issues)
